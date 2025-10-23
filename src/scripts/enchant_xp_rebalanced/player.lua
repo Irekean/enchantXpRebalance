@@ -25,6 +25,7 @@ I.SkillProgression.addSkillUsedHandler(function(skillid, params)
     -- We are attached to the Player, so this should always be an Actor.
     if not types.Actor.objectIsInstance(playerActor) then
       ui.showMessage('Enchanting XP Rebalanced: there is an error with the installation, report this error or remove the mod')
+      print("The script is not attached to a player")
       return
     end
     
@@ -39,13 +40,13 @@ I.SkillProgression.addSkillUsedHandler(function(skillid, params)
         if(enchIt) then
           --give extra xp
 
-          --ui.showMessage("Normal XP:" .. params.skillGain)
+          print("Normal XP:" .. params.skillGain)
           params.skillGain = baseSkillGain * enchIt.cost
-          --ui.showMessage("Modified XP:" .. params.skillGain)
+          print("Modified XP:" .. params.skillGain)
         end
 
       else
-        --ui.showMessage('No enchanted item was selected, gain normal XP.')
+        print('No enchanted item was selected')
       end
     end
 
@@ -57,9 +58,9 @@ I.SkillProgression.addSkillUsedHandler(function(skillid, params)
         if(enchIt) then
           --give extra xp
 
-          --ui.showMessage("Normal XP:" .. params.skillGain)
+          print("Normal XP:" .. params.skillGain)
           params.skillGain = baseSkillGain * enchIt.cost
-          --ui.showMessage("Modified XP:" .. params.skillGain)
+          print("Modified XP:" .. params.skillGain)
         end
     end
     
