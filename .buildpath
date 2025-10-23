@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildpath>
+	<buildpathentry kind="src" path="src"/>
+	<buildpathentry external="true" kind="lib" path="C:/OpenMW 0.49.0/resources/lua_api"/>
+	<buildpathentry external="true" kind="lib" path="C:/OpenMW 0.49.0/resources/vfs"/>
+</buildpath>
